@@ -4,7 +4,7 @@ USER=$(whoami)
 plist_path="$1"
 plist_filename=$(basename "$plist_path")
 echo $plist_filename
-install_path="/Users/amoghp/Library/LaunchAgents/$plist_filename"
+install_path="$(eval echo "~$different_user")/Library/LaunchAgents/$plist_filename"
 
 sudo rm -f /var/log/bluetooth_flipper.error
 sudo touch /var/log/bluetooth_flipper.error
