@@ -20,10 +20,10 @@ sudo cp -f "$plist_path" "$install_path"
 # sudo chmod 644 "$install_path"
 
 echo "Unloading..."
-launchctl unload "$install_path"
+sudo launchctl unload "$install_path"
 
 echo "Loading..."
-launchctl load "$install_path"
+sudo launchctl load "$install_path"
 
 echo "to check if it's running, run this command: sudo launchctl list | grep com.jtjr.bluetooth_flipper"
 echo "to uninstall, run this command: sudo launchctl unload \"$install_path\""
